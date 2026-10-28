@@ -1,0 +1,41 @@
+:root{
+  --font-display:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --font-wordmark:"Archivo Black","Archivo",Helvetica,Arial,sans-serif;
+  --font-sans:"Archivo",Helvetica,Arial,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,"Courier New",monospace;
+
+  /* Sizes — editorial portfolio scale */
+  --size-display-xl:clamp(56px,9vw,148px);
+  --size-display-lg:clamp(40px,5.2vw,84px);
+  --size-display-md:clamp(30px,3.2vw,48px);
+  --size-wordmark:clamp(28px,2.6vw,42px);
+  --size-wordmark-sm:20px;
+  --size-nav:17px;
+  --size-lede:22px;
+  --size-body:17px;
+  --size-body-sm:15px;
+  --size-caption:13px;
+  --size-label:11px;
+
+  --leading-tight:0.94;
+  --leading-snug:1.08;
+  --leading-body:1.55;
+  --leading-loose:1.7;
+
+  --track-wordmark:-0.02em;
+  --track-display:-0.015em;
+  --track-label:0.18em;
+  --track-nav:0.02em;
+
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+
+  /* Semantic type roles */
+  --type-display:var(--weight-regular) var(--size-display-lg)/var(--leading-tight) var(--font-display);
+  --type-wordmark:var(--size-wordmark)/0.92 var(--font-wordmark);
+  --type-nav:var(--weight-semibold) var(--size-nav)/1.2 var(--font-sans);
+  --type-body:var(--weight-regular) var(--size-body)/var(--leading-body) var(--font-sans);
+  --type-label:var(--weight-bold) var(--size-label)/1.4 var(--font-mono);
+}

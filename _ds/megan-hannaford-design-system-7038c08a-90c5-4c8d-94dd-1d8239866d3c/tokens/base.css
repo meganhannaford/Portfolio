@@ -1,0 +1,6 @@
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font:var(--type-body);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:var(--link);text-decoration:none;transition:var(--transition-hover)}
+a:hover{color:var(--link-hover)}
+img{display:block;max-width:100%}
+::selection{background:var(--accent);color:var(--text-on-accent)}

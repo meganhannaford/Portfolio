@@ -1,0 +1,49 @@
+:root{
+  /* Base ink — plum-biased neutrals */
+  --ink-900:#2C0F1D;
+  --ink-700:#4A1B2E;
+  --ink-500:#7A5566;
+  --ink-300:#A9909C;
+  --ink-100:#C6D8E6;
+
+  /* Paper grounds — one per surface, never mixed */
+  --baby-blue:#DDEBF6;
+  --baby-blue-deep:#C3DAEB;
+  --baby-blue-pale:#EEF6FC;
+  --paper-white:#FFFFFF;
+  --paper-bone:#F2F0EB;
+
+  /* Plum family — the single accent */
+  --plum:#6E2440;
+  --plum-bright:#9B2F53;
+  --plum-deep:#3D1526;
+  --plum-tint:#EADCE3;
+
+  /* Semantic aliases */
+  --surface-page:var(--baby-blue);
+  --surface-raised:var(--paper-white);
+  --surface-media:var(--baby-blue-deep);
+  --surface-footer:var(--plum);
+  --surface-invert:var(--plum-deep);
+
+  --text-strong:var(--plum-deep);
+  --text-body:var(--plum);
+  --text-muted:var(--ink-500);
+  --text-accent:var(--plum-bright);
+  --text-on-invert:var(--baby-blue-pale);
+  --text-on-accent:var(--baby-blue-pale);
+
+  --accent:var(--plum-bright);
+  --accent-quiet:var(--plum);
+
+  --rule:var(--plum);
+  --rule-quiet:var(--baby-blue-deep);
+
+  --link:var(--plum-deep);
+  --link-hover:var(--plum-bright);
+}
+
+/* Ground variants. Apply to a section or the <body> to reskin a whole surface. */
+[data-ground="pale"]{--surface-page:var(--baby-blue-pale);--surface-media:var(--baby-blue-deep)}
+[data-ground="plum"]{--surface-page:var(--plum);--surface-footer:var(--plum-deep);--surface-media:var(--plum-deep);--text-strong:var(--baby-blue-pale);--text-body:var(--baby-blue);--text-muted:var(--baby-blue-deep);--link:var(--baby-blue-pale);--link-hover:var(--baby-blue);--rule:var(--baby-blue-deep);--accent:var(--baby-blue)}
+[data-ground="white"]{--surface-page:var(--paper-white);--surface-media:var(--baby-blue)}

@@ -1,0 +1,21 @@
+:root{
+  /* The genre is flat and square-edged. Radius is reserved for chips and floating controls. */
+  --radius-none:0px;
+  --radius-xs:2px;
+  --radius-sm:6px;
+  --radius-md:12px;
+  --radius-pill:999px;
+
+  --border-hairline:1px solid var(--rule-quiet);
+  --border-ink:1px solid var(--rule);
+  --border-underline:2px;
+
+  /* Shadows exist only for elements that float above the page. */
+  --shadow-none:none;
+  --shadow-float:0 6px 24px rgba(11,11,11,0.16);
+  --shadow-lift:0 2px 10px rgba(11,11,11,0.10);
+
+  --media-ratio-wide:16/9; /* @kind other */
+  --media-ratio-square:1/1; /* @kind other */
+  --media-ratio-portrait:4/5; /* @kind other */
+}
