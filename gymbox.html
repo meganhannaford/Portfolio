@@ -260,7 +260,7 @@ class Component extends DCLogic {
     ['gymbox-ooh-hearse', 'Hearse with a Gymbox panel: It\'s too late for him, but you still have time.'],
     ['gymbox-ooh-stone', 'Gravestone engraved: It\'s too late for her. But you still have time. Don\'t let age win.'],
     ['gymbox-ooh-funeral-home', 'Gymbox billboard above a funeral directors: Don\'t worry, you still have time.'],
-  ].map(([k, a]) => ({ src: 'assets/' + k + '.png', alt: a }));
+  ].map(([k, a]) => ({ src: 'assets/' + k + '.webp', alt: a }));
   go = (d) => this.loopGo('m', this.slides.length, 1, d);
   componentDidMount() { this.onKey = e => { if (e.key === 'ArrowLeft') this.go(-1); if (e.key === 'ArrowRight') this.go(1); }; window.addEventListener('keydown', this.onKey); }
   componentWillUnmount() { window.removeEventListener('keydown', this.onKey); }
