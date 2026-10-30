@@ -60,7 +60,7 @@ header nav > a:hover, header nav .wdd > a:hover { opacity: 1 !important; }
 html body .wdd .wdd-m[data-fixed] { position: fixed !important; z-index: 9500 !important; }
 /* touch: no hover dropdown, so Work taps straight through */
 @media (hover: none) { html body .wdd:is(:hover, :focus-within) .wdd-m, html body .wdd .wdd-m { display: none !important; } }
-/* touch: tile labels always visible */
+/* phones: stacked stagger items show without the scroll-linked fade (it could leave items invisible on some phones) */ @media (max-width: 760px) { html body [data-stagger] > * { animation: none !important; opacity: 1 !important; } } /* touch: tile labels always visible */
 @media (hover: none) { html body .tile .tile-scrim { transform: none !important; } .tile:hover img { transform: none; } } /* touch: label strip covers the bottom, so lift each tile image by half the strip to centre the logo in the visible area */ @media (hover: none) { html body .tile > img { top: calc(var(--tile-strip, 46px) / -3.2) !important; bottom: auto !important; } }
 @media (prefers-reduced-motion: reduce) { [data-rv] { opacity: 1 !important; transform: none !important; } .tile img, #mh-bar { transition: none !important; } }
 `;
