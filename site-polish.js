@@ -61,7 +61,7 @@ html body .wdd .wdd-m[data-fixed] { position: fixed !important; z-index: 9500 !i
 /* touch: no hover dropdown, so Work taps straight through */
 @media (hover: none) { html body .wdd:is(:hover, :focus-within) .wdd-m, html body .wdd .wdd-m { display: none !important; } }
 /* touch: tile labels always visible */
-@media (hover: none) { html body .tile .tile-scrim { transform: none !important; } .tile:hover img { transform: none; } }
+@media (hover: none) { html body .tile .tile-scrim { transform: none !important; } .tile:hover img { transform: none; } } /* touch: label strip covers the bottom, so lift each tile image by half the strip to centre the logo in the visible area */ @media (hover: none) { html body .tile > img { top: calc(var(--tile-strip, 46px) / -2) !important; bottom: auto !important; } }
 @media (prefers-reduced-motion: reduce) { [data-rv] { opacity: 1 !important; transform: none !important; } .tile img, #mh-bar { transition: none !important; } }
 `;
 var st = document.createElement('style'); st.setAttribute('data-mh-polish',''); st.textContent = css;
@@ -70,6 +70,9 @@ var st = document.createElement('style'); st.setAttribute('data-mh-polish',''); 
 function ready(fn){ if (document.readyState !== 'loading') setTimeout(fn, 0); else document.addEventListener('DOMContentLoaded', fn); }
 
 ready(function(){
+  /* tile strip height, used to lift tile images on touch screens */
+  var tileStrip = function(){ document.querySelectorAll('.tile').forEach(function(t){ var sc = t.querySelector('.tile-scrim'); if (sc && sc.offsetHeight) t.style.setProperty('--tile-strip', sc.offsetHeight + 'px'); }); };
+  tileStrip(); setTimeout(tileStrip, 400); setTimeout(tileStrip, 1500); addEventListener('resize', tileStrip);
   /* 8 mini header */
   var file = decodeURIComponent(location.pathname.split('/').pop() || '');
   if (!file) file = 'index.html'; else if (!/\.html$/.test(file)) file += '.html';
